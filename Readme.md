@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Денис Бардышевский](https://up.htmlacademy.ru/htmlcss/35/user/2168343).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Корелин](https://htmlacademy.ru/profile/maxzbest)
 
 ---
 
