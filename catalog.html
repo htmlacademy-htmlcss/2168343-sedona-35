@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
     <title> Каталог</title>
   </head>
 
@@ -10,8 +11,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" src="images/page-header-logo.svg" width="140" height="70"
-            alt="Логотип сайта Седона">
+          <img class="page-header-logo" src="images/page-header-logo.svg" width="140" height="70" alt="Логотип сайта Седона">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -93,17 +93,19 @@
           </fieldset>
           <fieldset class="cotalog-filter-group">
             <legend class="cotalog-filter-title">Стоимость, ₽:</legend>
-            <input type="number" name="price-min" min="0" placeholder="от" value="0">
-            <input type="number" name="price-max" max="88000" placeholder="до" value="9000">
+            <input class="price" type="number" name="price-min" min="0" placeholder="от" value="0">
+            <input class="price" type="number" name="price-max" max="88000" placeholder="до" value="9000">
           </fieldset>
-          <button class="additional-button button" type="submit">Применить</button>
-          <button class="cotalog-buttom" type="reset">Сбросить</button>
+          <button class="button-blue button" type="submit">Применить</button>
+          <button class="button-invis button" type="reset">Сбросить</button>
         </form>
       </section>
 
       <section class="search-results">
-        <h2 class="search-results-title">Найдено гостиниц:</h2>
-        <output class="search-result" name="result">38</output>
+        <div class="search-result">
+          <h2 class="search-result-title">Найдено гостиниц:</h2>
+          <output class="search-result" name="result">38</output>
+        </div>
         <select class="select-control" aria-label="Сначала дешевые">
           <option value="cheap">Сначала дешевые</option>
           <option value="expensive">Сначала дорогие</option>
@@ -119,19 +121,19 @@
           <span class="visually-hidden">Показать списком</span>
         </button>
 
-        <ul class="hotel-card">
-          <li>
+        <ul class="hotel-cards">
+          <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-card-photo" src="images/hotel-1.jpg" width="300"  height="212" alt="Amara Resort & Spa">
               <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">от 4000</span>
-            <button class="hotel-card-more-info button" type="button">Подробнее</button>
-            <button class="additional-button button" type="button">В избранное</button>
+            <button class="button" type="button">Подробнее</button>
+            <button class="button button-blue" type="button">В избранное</button>
             <span class="rating">Рейтинг: 8,5</span>
           </li>
-          <li>
+          <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-card-photo" src="images/hotel-2.jpg" width="300"  height="212" alt="Villas at Poco Diablo">
               <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
@@ -139,10 +141,10 @@
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">от 5000</span>
             <button class="hotel-card-more-info button" type="button">Подробнее</button>
-            <button class="choice-button button" type="button">В избранное</button>
+            <button class="button button-green" type="button">В избранное</button>
             <span class="rating">Рейтинг: 9,2</span>
           </li>
-          <li>
+          <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-card-photo" src="images/hotel-3.jpg" width="300"  height="212" alt="Desert Quail Inn">
               <h3 class="hotel-card-title">Desert Quail Inn</h3>
@@ -150,10 +152,10 @@
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">от 2500</span>
             <button class="hotel-card-more-info button" type="button">Подробнее</button>
-            <button class="additional-button button" type="button">В избранное</button>
+            <button class="button button-blue" type="button">В избранное</button>
             <span class="rating">Рейтинг: 6,9</span>
           </li>
-          <li>
+          <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-card-photo" src="images/hotel-4.jpg" width="300"  height="212" alt="GreenTree Inn">
               <h3 class="hotel-card-title">GreenTree Inn</h3>
@@ -161,7 +163,7 @@
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">от 1500</span>
             <button class="hotel-card-more-info button" type="button">Подробнее</button>
-            <button class="additional-button button" type="button">В избранное</button>
+            <button class="button button-blue" type="button">В избранное</button>
             <span class="rating">Рейтинг: 5,0</span>
           </li>
         </ul>
@@ -187,12 +189,12 @@
           </li>
         </ul>
       </section>
-      <section class="subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+      <section class="subscribe subscribe-catalog">
+        <h2 class="subscribe-title subscribe-title-catalog">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input name="subscribe-email" type="email" id="subscribe-email" placeholder="Ваш e-mail" required>
-          <button class="subscribe-button  button" type="submit">Подписаться</button>
+          <button class="button button-blue" type="submit">Подписаться</button>
         </form>
       </section>
 
