@@ -304,14 +304,14 @@ body {
   line-height: 28px;
 }
 
-.hotel-card span {
+.hotel-card-item span {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: #333333;
 }
 
-.hotel-card .rating {
+.hotel-card-item .rating {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
