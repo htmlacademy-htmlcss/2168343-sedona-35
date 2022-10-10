@@ -33,7 +33,7 @@ body {
   text-align: center;
 }
 
-.button-blue {
+.button-additional {
   font-size: 16px;
   line-height: 20px;
   background-color: #82B3D3;
@@ -47,11 +47,11 @@ body {
   background-color: #ffffff;
 }
 
-.button-green {
+.button-selected {
   background-color: #7DB54F;
 }
 
-.subscribe-form .button-blue {
+.subscribe-form .button-additional {
   font-size: 20px;
   line-height: 36px;
 }
