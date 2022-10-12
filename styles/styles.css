@@ -21,9 +21,9 @@
   --color-light-blue: #82B3D3;
   --color-green: #7DB54F;
   --color-brown: #756157;
-  --color-background-ininvisible: rgba(255, 255, 255, 0);
-  --color-background-light-blue: rgba(131, 179, 211, 0.12);
-  --color-background-light-blue2: rgba(131, 179, 211, 0.2);
+  --color-background-invisible: rgba(255, 255, 255, 0);
+  --color-background-light-blue-12: rgba(131, 179, 211, 0.12);
+  --color-background-light-blue-20: rgba(131, 179, 211, 0.2);
   --color-background-white: #F2F2F2;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 .button-invisible {
-  background-color: var(--color-background-ininvisible);
+  background-color: var(--color-background-invisible);
 }
 
 .button-light {
@@ -123,7 +123,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: var(--color-light-black);
-  background-color: var(--color-background-light-blue);
+  background-color: var(--color-background-light-blue-12);
 }
 
 .advantages-item-2 {
@@ -131,7 +131,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: var(--color-light-black);
-  background-color: var(--color-background-light-blue2);
+  background-color: var(--color-background-light-blue-20);
 }
 
 .advantages-title {
@@ -178,7 +178,7 @@ body {
 }
 
 .recommendations-item-background {
-  background-color: var(--color-background-light-blue);
+  background-color: var(--color-background-light-blue-12);
 }
 
 .search-hotel {
