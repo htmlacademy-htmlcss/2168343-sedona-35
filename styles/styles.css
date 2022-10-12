@@ -16,20 +16,22 @@
 
 :root {
   --color-black: #000;
-}
-
-:root {
   --color-white: #fff;
+  --color-light-black: #333;
+  --color-light-blue: #82B3D3;
+  --color-green: #7DB54F;
+  --color-brown: #756157;
+  --color-background-ininvisible: rgba(255, 255, 255, 0);
+  --color-background-light-blue: rgba(131, 179, 211, 0.12);
+  --color-background-light-blue2: rgba(131, 179, 211, 0.2);
+  --color-background-white: #F2F2F2;
 }
 
-:root {
-  --color-brown: #333;
-}
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
-  color: var(--color-black)
+  color: var(--color-black);
   background-color: var(--color-white);
 }
 
@@ -38,7 +40,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: var(--color-white);
-  background-color: #756157;
+  background-color: var(--color-brown);
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -47,11 +49,11 @@ body {
 .button-additional {
   font-size: 16px;
   line-height: 20px;
-  background-color: #82B3D3;
+  background-color: var(--color-light-blue);
 }
 
 .button-invisible {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: var(--color-background-ininvisible);
 }
 
 .button-light {
@@ -59,7 +61,7 @@ body {
 }
 
 .button-selected {
-  background-color: #7DB54F;
+  background-color: var(--color-green);
 }
 
 .subscribe-form .button-additional {
@@ -103,7 +105,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
-  color: var(--color-brown);
+  color: var(--color-light-black);
   text-transform: none;
 }
 
@@ -113,23 +115,23 @@ body {
 
 .advantages-item-white {
   color: var(--color-white);
-  background-color: #82B3D3;
+  background-color: var(--color-light-blue);
 }
 
 .advantages-item-1 {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: var(--color-brown);
-  background-color: rgba(131, 179, 211, 0.12);
+  color: var(--color-light-black);
+  background-color: var(--color-background-light-blue);
 }
 
 .advantages-item-2 {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: var(--color-brown);
-  background-color: rgba(131, 179, 211, 0.2);
+  color: var(--color-light-black);
+  background-color: var(--color-background-light-blue2);
 }
 
 .advantages-title {
@@ -164,7 +166,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  color: var(--color-brown);
+  color: var(--color-light-black);
 }
 
 .recommendations-title {
@@ -176,7 +178,7 @@ body {
 }
 
 .recommendations-item-background {
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: var(--color-background-light-blue);
 }
 
 .search-hotel {
@@ -184,7 +186,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  color: var(--color-brown);
+  color: var(--color-light-black);
 }
 
 .search-hotel-tittle {
@@ -229,7 +231,7 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: var(--color-black);
-  background-color: #F2F2F2;
+  background-color: var(--color-background-white);
 }
 
 .contacts {
@@ -280,7 +282,7 @@ body {
   font-size: 18px;
   line-height: 23px;
   color: var(--color-black);
-  background-color: #F2F2F2;
+  background-color: var(--color-background-white);
   font-weight: inherit;
 }
 
@@ -295,7 +297,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  color: var(--color-brown);
+  color: var(--color-light-black);
 }
 
 .hotel-card-link {
@@ -311,7 +313,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  color: var(--color-brown);
+  color: var(--color-light-black);
 }
 
 .hotel-card-item .rating {
@@ -319,14 +321,14 @@ body {
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  background-color: #F2F2F2;
+  background-color: var(--color-background-white);
 }
 
 .pagination-link {
   font-size: 20px;
   line-height: 36px;
   color: var(--color-white);
-  background-color: #82B3D3;
+  background-color: var(--color-light-blue);
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -334,7 +336,7 @@ body {
 
 .pagination-current {
   color: var(--color-black);
-  background-color: #F2F2F2;
+  background-color: var(--color-background-white);
 }
 
 .pagination-all {
@@ -354,5 +356,5 @@ body {
 }
 
 .subscribe-catalog-text {
-  color: var(--color-brown);
+  color: var(--color-light-black);
 }
