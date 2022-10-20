@@ -92,6 +92,7 @@ body {
   background-color: var(--color-white);
   width: 1200px;
   margin: 0 auto;
+  height: 64px;
 }
 
 .navigation {
@@ -182,6 +183,7 @@ body {
 
 .advantages-item {
   width: 400px;
+  height: 384px;
 }
 
 .advantages-list li:first-child,
@@ -241,6 +243,7 @@ body {
 
 .recommendations-item {
   width: 400px;
+  height: 384px;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
