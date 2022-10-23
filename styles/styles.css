@@ -26,11 +26,13 @@
   --color-background-light-blue-20: rgba(131, 179, 211, 0.2);
   --color-background-white: #F2F2F2;
   --color-background-logo: rgb(45, 112, 194);
+  --color-border: #E5E5E5;
 }
 
 html {
   height: 100%;
 }
+
 body {
   width: 1200px;
   font-family: "PT Sans", sans-serif;
@@ -81,7 +83,7 @@ ul {
   line-height: 36px;
 }
 
-.visually-hidden{
+.visually-hidden {
   display: none;
 }
 
@@ -433,7 +435,6 @@ ul {
   font-weight: 700;
   margin-right: 200px;
   text-transform: uppercase;
-
 }
 
 .search-result-title {
@@ -444,7 +445,7 @@ ul {
 .select-control {
   font-family: 'PT Sans' sans-serif;
   font-size: 18px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid var(--color-border);
   border-radius: 4px;
   color: var(--color-light-black);
   margin-right: 70px;
@@ -455,6 +456,7 @@ ul {
   margin: 0 auto;
 
 }
+
 .hotel-card-link {
   text-decoration: none;
 }
@@ -479,13 +481,12 @@ ul {
   background-color: var(--color-background-white);
 }
 
-.pagination{
+.pagination {
   width: 1060px;
   margin: 0 auto;
-  padding: 0;
   display: flex;
   align-items: center;
- }
+}
 
 .pagination-link {
   font-size: 20px;
