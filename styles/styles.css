@@ -58,6 +58,7 @@ ul {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  border-radius: 4px;
 }
 
 .button-additional {
@@ -83,8 +84,23 @@ ul {
   line-height: 36px;
 }
 
+.search-hotel .button {
+  font-size: 20px;
+  line-height: 36px;
+  width: 376px;
+  height: 52px;
+  padding: 8px 50px;
+}
+
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -99,30 +115,47 @@ ul {
 }
 
 .navigation-logo {
-  margin-right: 28px;
+  margin-right: 30px;
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 339px;
 }
 
 .navigation-user {
   width: 268px;
   margin-left: auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation-link {
+  display: block;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   color: var(--color-black);
   text-align: center;
+  padding: 20px 16px;
   text-transform: capitalize;
   text-decoration: none;
 }
 
+.navigation-user .navigation-link {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 22px 12px;
+}
+
 .navigation-item .button {
+  /* width: 160px; */
+  /* height: 36px; */
   color: var(--color-white);
+  /* padding: 8px 50px; */
+  /* border-radius: 4px; */
+  text-transform: uppercase;
 }
 
 .hero-block {
@@ -144,6 +177,7 @@ ul {
 .welcome-logo {
   display: block;
   margin: 0 auto;
+  padding-top: 51px;
 }
 
 
@@ -157,12 +191,17 @@ ul {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
+  padding: 69px 290px 0;
+  margin-bottom: 25px;
 }
 
 .description-text {
   font-size: 22px;
   line-height: 26px;
   color: var(--color-light-black);
+  margin: 0;
+  padding: 0 274px 90px 275px;
 }
 
 .advantages-list {
@@ -174,7 +213,7 @@ ul {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  width: 400px;
+  flex-basis: 400px;
   min-height: 384px;
   text-align: center;
 }
@@ -200,10 +239,14 @@ ul {
   line-height: 28px;
   text-transform: uppercase;
   color: var(--color-black);
+  margin: 0;
+  margin-bottom: 62px;
+  padding-top: 103px;
 }
 
 .advantages-title-white {
   color: var(--color-white);
+  padding-top: 92px;
 }
 
 .advantages-item-house {
@@ -241,6 +284,9 @@ ul {
   font-weight: 700;
   color: var(--color-black);
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 182px;
 }
 
 .recommendations-list li:last-child,
@@ -249,7 +295,7 @@ ul {
 }
 
 .search-hotel {
-  padding: 96px 0;
+  padding: 96px 304px;
   text-align: center;
   color: var(--color-light-black);
   background-color: var(--color-white);
@@ -261,10 +307,16 @@ ul {
   line-height: 36px;
   text-transform: uppercase;
   color: var(--color-black);
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.search-hotel-text {
+  margin: 0;
+  margin-bottom: 54px;
 }
 
 .subscribe {
-  width: 1200px;
   height: 414px;
   display: flex;
   flex-direction: column;
