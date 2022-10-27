@@ -59,20 +59,25 @@ ul {
   text-decoration: none;
   text-align: center;
   border-radius: 4px;
+  border-style: none;
 }
 
 .button-additional {
   font-size: 16px;
   line-height: 20px;
   background-color: var(--color-light-blue);
+  padding: 8px 50px;
 }
 
 .button-invisible {
   background-color: var(--color-background-invisible);
+  padding: 8px 57px;
 }
 
 .button-light {
   background-color: var(--color-white);
+  width: 48px;
+  height: 48px;
 }
 
 .button-selected {
@@ -82,6 +87,13 @@ ul {
 .subscribe-form .button-additional {
   font-size: 20px;
   line-height: 36px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.filtet-button-wrap .button-additional {
+  margin-top: 56px;
+  margin-bottom: 32px;
 }
 
 .search-hotel .button {
@@ -125,7 +137,7 @@ ul {
 }
 
 .navigation-user {
-  width: 268px;
+  width: 288px;
   margin-left: auto;
   justify-content: space-between;
   align-items: center;
@@ -144,18 +156,22 @@ ul {
 }
 
 .navigation-user .navigation-link {
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 18px;
+  min-height: 18px;
   padding: 22px 12px;
 }
 
 .navigation-item .button {
-  /* width: 160px; */
-  /* height: 36px; */
+  font-size: 16px;
+  line-height: 20px;
+  display: inline;
+  width: 160px;
+  height: 36px;
   color: var(--color-white);
-  /* padding: 8px 50px; */
-  /* border-radius: 4px; */
+  padding: 8px 50px;
+  border-radius: 4px;
   text-transform: uppercase;
+
 }
 
 .hero-block {
@@ -335,6 +351,7 @@ ul {
   text-transform: uppercase;
   color: var(--color-white);
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .subscribe-text {
@@ -343,12 +360,24 @@ ul {
   line-height: 26px;
   text-align: center;
   color: var(--color-white);
+  margin: 0;
+  margin-bottom: 54px;
 }
 
-#subscribe-email {
+.subscribe-form {
+  width: 684px;
+  display: flex;
+}
+
+.ubscribe-email {
+  flex-grow: 1;
+}
+
+.subscribe-email {
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+  width: 452px;
   color: var(--color-black);
   background-color: var(--color-background-white);
 }
@@ -362,6 +391,16 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social-item {
+  width: 47px;
+  height: 40px;
 }
 
 .contacts {
@@ -399,13 +438,19 @@ ul {
 .filters-title {
   font-size: 60px;
   line-height: 78px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.breadcrumbs{
+  display: flex;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+  margin-right: 29px;
 }
 
 .cotalog-filter-container {
@@ -414,6 +459,12 @@ ul {
   width: 1060px;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.cotalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .catalog-filter-left-wrap {
@@ -425,21 +476,16 @@ ul {
 
 .catalog-filter-left-wrap .cotalog-filter-group {
   width: 150px;
-  padding: 0;
 }
 
 .catalog-filter-right-wrap {
-  width: 549px;
+  /* width: 549px; */
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 
 .catalog-filter-right-wrap .cotalog-filter-group {
   width: 288px;
-  margin: 0;
   margin-right: 70px;
-  padding: 0;
   display: flex;
 }
 
@@ -452,21 +498,34 @@ ul {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  margin-bottom: 32px;
+  padding: 0;
 }
 
 .cotalog-filter-item {
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.cotalog-filter-item:last-child{
+  margin-bottom: 0;
+}
+
+.price-container {
+  display: flex;
 }
 
 .price {
   font-size: 18px;
-  line-height: 23px;
+  line-height: 24px;
   color: var(--color-black);
   background-color: var(--color-background-white);
   font-weight: inherit;
   width: 143px;
+  padding: 0;
+  border-style: none;
 }
 
 .search-results {
@@ -478,6 +537,7 @@ ul {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .search-result {
@@ -495,18 +555,30 @@ ul {
 }
 
 .select-control {
-  font-family: 'PT Sans' sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-size: 18px;
+  line-height: 21px;
   border: 2px solid var(--color-border);
   border-radius: 4px;
   color: var(--color-light-black);
   margin-right: 70px;
+  padding: 14px 20px;
 }
 
 .hotel-card-list {
   width: 1060px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.hotel-card-item {
+  flex-basis: 340px;
+  margin-right: 20px
+}
+
+.hotel-card-item:nth-child(3n){
+  margin-right: 0;
 }
 
 .hotel-card-link {

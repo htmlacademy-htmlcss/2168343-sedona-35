@@ -39,79 +39,81 @@
     </header>
 
     <main class="main-inner">
-              <section class="filters">
-          <div class="breadcrumbs-wrap">
-            <h1 class="filters-title">Гостиницы Седоны</h1>
-            <ul class="breadcrumbs">
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html"><span claass="visually-hidden">Главная</span></a>
-              </li>
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link">Гостиницы</a>
-              </li>
-            </ul>
-          </div>
-          <h2 class="visually-hidden" hidden>Фильтр гостиниц по параметрам</h2>
-          <form class="cotalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="cotalog-filter-container">
-              <div class="catalog-filter-left-wrap">
-                <fieldset class="cotalog-filter-group">
-                  <legend class="cotalog-filter-title">Инфраструктура:</legend>
-                  <ul class="cotalog-filter-list">
-                    <li class="cotalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="checkbox" name="Бассейн" checked>Бассейн
-                      </label>
-                    </li>
-                    <li class="cotalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="checkbox" name="Парковка" checked>Парковка
-                      </label>
-                    </li>
-                    <li class="cotalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="checkbox" name="Wi-Fi">Wi-Fi
-                      </label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <fieldset class="cotalog-filter-group">
-                  <legend class="cotalog-filter-title">Тип жилья:</legend>
-                  <ul class="cotalog-filter-list">
-                    <li class="cotalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" name="hotel-group" checked>Гостиница
-                      </label>
-                    </li>
-                    <li class="cotalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" name="hotel-group">Мотель
-                      </label>
-                    </li>
-                    <li class="cotalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" name="hotel-group">Апартаменты
-                      </label>
-                    </li>
-                  </ul>
-                </fieldset>
-              </div>
-              <div class="catalog-filter-right-wrap">
-                <fieldset class="cotalog-filter-group">
-                  <legend class="cotalog-filter-title">Стоимость, ₽:</legend>
-                  <input class="price" type="number" name="price-min" min="0" placeholder="от" value="0">
-                  <input class="price" type="number" name="price-max" max="88000" placeholder="до" value="9000">
-                </fieldset>
-                <div class="filtet-button-wrap">
-                  <button class="button-additional button" type="submit">Применить</button>
-                  <button class="button-invisible button" type="reset">Сбросить</button>
+      <section class="filters">
+        <div class="breadcrumbs-wrap">
+          <h1 class="filters-title">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html"><span claass="visually-hidden">Главная</span></a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Гостиницы</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="visually-hidden" hidden>Фильтр гостиниц по параметрам</h2>
+        <form class="cotalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="cotalog-filter-container">
+            <div class="catalog-filter-left-wrap">
+              <fieldset class="cotalog-filter-group">
+                <legend class="cotalog-filter-title">Инфраструктура:</legend>
+                <ul class="cotalog-filter-list">
+                  <li class="cotalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="Бассейн" checked>Бассейн
+                    </label>
+                  </li>
+                  <li class="cotalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="Парковка" checked>Парковка
+                    </label>
+                  </li>
+                  <li class="cotalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="Wi-Fi">Wi-Fi
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="cotalog-filter-group">
+                <legend class="cotalog-filter-title">Тип жилья:</legend>
+                <ul class="cotalog-filter-list">
+                  <li class="cotalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="hotel-group" checked>Гостиница
+                    </label>
+                  </li>
+                  <li class="cotalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="hotel-group">Мотель
+                    </label>
+                  </li>
+                  <li class="cotalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="hotel-group">Апартаменты
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="catalog-filter-right-wrap">
+              <fieldset class="cotalog-filter-group">
+                <legend class="cotalog-filter-title">Стоимость, ₽:</legend>
+                <div class="price-container">
+                  <input class="price price-min" type="number" name="price-min" min="0" placeholder="от" value="0">
+                  <input class="price price-max" type="number" name="price-max" max="88000" placeholder="до" value="9000">
                 </div>
+              </fieldset>
+              <div class="filtet-button-wrap">
+                <button class="button-additional button" type="submit">Применить</button>
+                <button class="button-invisible button" type="reset">Сбросить</button>
               </div>
             </div>
+          </div>
 
-          </form>
+        </form>
 
-        </section>
+      </section>
 
 
       <section class="search-results">
@@ -210,7 +212,8 @@
         <p class="subscribe-text subscribe-catalog-text">Только полезная информация и никакого спама,<br>честное
           бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input name="subscribe-email" type="email" id="subscribe-email" placeholder="Ваш e-mail" required>
+          <input class="ubscribe-email" name="subscribe-email" type="email" id="subscribe-email"
+            placeholder="Ваш e-mail" required>
           <button class="button button-additional" type="submit">Подписаться</button>
         </form>
       </section>
