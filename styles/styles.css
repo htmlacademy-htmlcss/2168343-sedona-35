@@ -41,6 +41,7 @@ body {
   color: var(--color-black);
   background-color: var(--color-background-white);
   margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 ul {
@@ -167,11 +168,25 @@ ul {
 .navigation-link-search {
   background-image: url(../images/search.svg);
   background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .navigation-link-favorites {
   background-image: url(../images/favorites-icon.svg);
   background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.namber {
+  font-size: 10px;
+  line-height: 10px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-green);
+  border-radius: 50%;
+  color: var(--color-white);
+  text-align: center;
 }
 
 .navigation-link.button {
