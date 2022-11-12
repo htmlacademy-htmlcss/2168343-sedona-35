@@ -26,13 +26,14 @@
   --color-brown: #756157;
   --color-darker-brown: #615048;
   --color-brown-30: rgba(117, 97, 87, 0.3);
-  --color-background-invisible: rgba(255, 255, 255, 0);
   --color-background-light-blue-12: rgba(131, 179, 211, 0.12);
   --color-background-light-blue-20: rgba(131, 179, 211, 0.2);
   --color-background-white: #F2F2F2;
   --color-background-logo: rgb(45, 112, 194);
   --color-border: #E5E5E5;
   --color-border-blue: #3F5E72;
+  --color-range-scale: rgba(255, 255, 255, 0.3);
+  --color-background-price: #E6E6E6;
   }
 
 html {
@@ -42,8 +43,8 @@ html {
 body {
   width: 1200px;
   font-family: "PT Sans", sans-serif;
-  font-size: 22px;
-  line-height: 26px;
+  /* font-size: 22px; */
+  /* line-height: 26px; */
   color: var(--color-black);
   background-color: var(--color-background-white);
   margin: 0 auto;
@@ -95,12 +96,12 @@ ul {
 }
 
 .button-invisible {
-  background-color: var(--color-background-invisible);
+  background-color: transparent;
   padding: 8px 57px;
 }
 
 .button-invisible:hover {
-  background-color: var(--color-background-invisible);
+  background-color: transparent;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -108,7 +109,7 @@ ul {
   outline: none;
   border: 3px solid var(--color-light-blue);
   padding: 5px 54px;
-  background-color: var(--color-background-invisible);
+  background-color: transparent;
 }
 
 .button-invisible:disabled {
@@ -155,10 +156,11 @@ ul {
 .button-additional-subscribe {
   font-size: 20px;
   line-height: 36px;
+  letter-spacing: -2px;
   border: none;
   border-radius: 0 4px 4px 0;
   padding: 8px 50px;
-  width: 243px;
+  width: 232px;
 }
 
 .button-additional-filter {
@@ -171,8 +173,10 @@ ul {
   font-size: 20px;
   line-height: 36px;
   width: 376px;
-  height: 52px;
   padding: 8px 50px;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .visually-hidden {
@@ -376,6 +380,7 @@ ul {
 .advantages-item-light-blue {
   color: var(--color-white);
   background-color: var(--color-light-blue);
+  padding-top: 92px;
 }
 
 .advantages-item-light-blue-12 {
@@ -486,6 +491,7 @@ ul {
 
 .recommendations-text {
   margin: 0;
+  padding: 0 85px;
 }
 
 .recommendations-list li:last-child,
@@ -511,6 +517,8 @@ ul {
 
 .search-hotel-text {
   margin: 0 0 54px 0;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .subscribe {
@@ -552,19 +560,23 @@ ul {
 }
 
 .subscribe-email {
+  font-family: 'PT Sans';
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   color: var(--color-black);
   background-color: var(--color-background-white);
-  padding: 0;
   border: none;
   flex-grow: 1;
 }
+.subscribe-email::placeholder {
+  padding: 14px 0 14px 20px;
+}
+
 
 .page-footer {
   background-color: var(--color-white);
-  padding: 40px 70px 30px;
+  padding: 45px 70px 35px;
 }
 
 .page-footer-container {
@@ -576,6 +588,18 @@ ul {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 5px 0;
+}
+
+.footer-social-item:first-child a > svg{
+  transform: translate(-2px, -8px);
+}
+
+.footer-social-item:last-child a > svg{
+  transform: translateY(-7px);
+}
+.footer-social-item:not(:first-child).footer-social-item:not(:last-child) a > svg {
+  transform: translate(3px, -8px);
 }
 
 .footer-social-link {
@@ -585,15 +609,6 @@ ul {
   width: 47px;
   height: 40px;
   box-sizing: border-box;
-}
-
-.footer-social-icon{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
 }
 
 .footer-social-link:hover svg {
@@ -613,10 +628,7 @@ ul {
 .contacts-phone {
   font-style: normal;
   font-size: 40px;
-  line-height: 40px;
-  font-weight: 400;
   text-decoration: none;
-  text-transform: uppercase;
   color: var(--color-black);
 }
 
@@ -652,14 +664,14 @@ ul {
   font-weight: 700;
   color: var(--color-white);
   background-image: url(../images/catalog-background.jpg);
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 
 }
 
 .breadcrumbs-wrap {
   width: 1060px;
-  margin: 30px auto 40px;
+  margin: 35px auto 40px;
 }
 
 
@@ -703,6 +715,7 @@ ul {
   width: 1060px;
   justify-content: space-between;
   align-items: flex-start;
+  padding-bottom: 70px;
 }
 
 .cotalog-filter-group {
@@ -714,12 +727,81 @@ ul {
 .catalog-filter-left-wrap {
   width: 370px;
   display: flex;
-  justify-content: space-between;
   margin-right: 140px;
 }
 
 .catalog-filter-left-wrap .cotalog-filter-group {
   width: 150px;
+}
+
+.catalog-filter-left-wrap fieldset:first-child {
+  margin-right: 70px;
+}
+.control{
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: var(--color-white);
+  left: 0;
+}
+
+.control-input[type="radio"]:checked + .control-mark-radio:before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-border-blue);
+  content: "";
+  left: 5px;
+  top: 5px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  content: url(../images/check.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 5px;
+  top: -1px;
+}
+
+
+.control:hover .control-mark,
+.control:hover .control-mark-radio {
+  opacity: 0.6;
+}
+
+.control:hover .control-label {
+  opacity: 0.6;
+}
+
+.control-input:focus + .control-mark,
+.control-input:focus + .control-mark-radio {
+  border: 3px solid var(--color-light-blue);
+}
+
+.control:active .control-mark,
+.control:active .control-mark-radio {
+  opacity: 0.3;
+}
+
+.control:active .control-label {
+  opacity: 0.3;
+}
+
+.control-mark-radio {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  left: 0;
 }
 
 .catalog-filter-right-wrap {
@@ -730,6 +812,7 @@ ul {
   width: 288px;
   margin-right: 70px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-button-wrap {
@@ -759,6 +842,8 @@ ul {
 .price-container {
   display: flex;
   gap: 2px;
+  height: 48px;
+  margin-bottom: 36px;
 }
 
 .price {
@@ -773,6 +858,29 @@ ul {
   max-height: 48px;
 }
 
+.price:hover {
+  background-color: var(--color-background-price);
+}
+
+.price:focus {
+  outline: none;
+  background-color: var(--color-background-price);
+  border: 3px solid var(--color-light-blue);
+  width: 137px;
+}
+
+.price:active {
+  outline: none;
+  border: 2px solid var(--color-black);
+  width: 139px;
+}
+
+.price::-webkit-outer-spin-button,
+.price::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .price-min {
   border-radius: 4px 0 0 4px;
 }
@@ -781,8 +889,56 @@ ul {
   border-radius: 0 4px 4px 0;
 }
 
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: var(--color-range-scale);
+  width: 287px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: var(--color-white);
+}
+
+.range-toggle{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-white);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.toggle-min {
+  left: 2;
+  top: -8px;
+}
+
+.toggle-max {
+  left: 210px;
+  top: -8px;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25)
+}
+
+.range-toggle:focus {
+  border: 3px solid var(--color-light-blue);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  border: 2px solid var(--color-light-blue);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
 .search-results {
   background-color: var(--color-white);
+  padding-top: 50px;
 }
 
 .search-result-wrap {
@@ -816,7 +972,7 @@ ul {
   border-radius: 4px;
   color: var(--color-light-black);
   margin-right: 70px;
-  padding: 14px 20px;
+  padding: 10px 20px;
 }
 
 .select-control:hover,
@@ -852,7 +1008,7 @@ ul {
   box-sizing: border-box;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
-  padding: 18px;
+  padding: 19px;
 }
 
 .hotel-card-link {
@@ -877,8 +1033,18 @@ ul {
   column-gap: 20px;
   display: grid;
   grid-template-columns: 140px 140px;
-  grid-template-rows: 16px 36px 36px;
+  /* grid-template-rows: 21px 36px 36px; */
   row-gap: 16px;
+}
+
+.hotel-card-info-wrap button:first-of-type {
+  padding: 8px 26px;
+  letter-spacing: -2px;
+}
+
+.hotel-card-info-wrap button:last-of-type {
+  padding: 8px 20px;
+  letter-spacing: -2px;
 }
 
 .hotel-card-price{
@@ -890,6 +1056,7 @@ ul {
   line-height: 21px;
   font-weight: 400;
   color: var(--color-light-black);
+  text-transform: capitalize;
 }
 
 .hotel-stars {
