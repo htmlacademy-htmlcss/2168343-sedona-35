@@ -202,7 +202,6 @@ ul {
   overflow: hidden;
 }
 
-
 .page-header {
   background-color: var(--color-white);
   min-height: 64px;
@@ -347,7 +346,6 @@ ul {
   margin: 0 auto;
   padding-top: 52px;
 }
-
 
 .description {
   text-align: center;
@@ -596,7 +594,6 @@ ul {
   padding: 14px 0 14px 20px;
 }
 
-
 .page-footer {
   background-color: var(--color-white);
   padding: 45px 70px 35px;
@@ -671,7 +668,6 @@ ul {
   fill: var(--color-brown-30);
 }
 
-
 .filters {
   min-height: 412px;
   display: flex;
@@ -688,7 +684,6 @@ ul {
   width: 1060px;
   margin: 35px auto 40px;
 }
-
 
 .filters-title {
   font-size: 60px;
@@ -723,7 +718,6 @@ ul {
 .breadcrumbs-link:active {
   fill: var(--color-gray-06);
 }
-
 
 .cotalog-filter-container {
   display: flex;
@@ -787,7 +781,6 @@ ul {
   left: 5px;
   top: -1px;
 }
-
 
 .control:hover .control-mark,
 .control:hover .control-mark-radio {
@@ -1374,7 +1367,6 @@ opacity: 0.6;
   color: var(--color-black);
 }
 
-
 .filed-button {
   width: 40px;
   padding: 14px 10px;
@@ -1509,7 +1501,6 @@ opacity: 0.6;
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
-
 
 
 .modal-button {
