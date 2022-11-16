@@ -1522,4 +1522,5 @@ opacity: 0.6;
   border-style: none;
   color: var(--color-white);
   border-radius: 10px;
+  right: auto;
 }
