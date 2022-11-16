@@ -1281,13 +1281,12 @@ ul {
  fill: var(--color-black-03);
 }
 
-
-
 .modal-title {
   font-size: 30px;
   line-height: 36px;
   margin: 0;
   margin-bottom: 64px;
+  text-transform:uppercase
 }
 
 .modal-form-title {
@@ -1296,6 +1295,18 @@ ul {
   font-weight: 700;
   padding: 12px 0;
 }
+.date-arrival {
+  background-color: var(--color-background-white);
+  border-style: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background-image: url(../images/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: right 22px top 16px;
+}
 
 .modal-form-title + input[type="text"]::placeholder {
   font-family: inherit;
@@ -1303,19 +1314,24 @@ ul {
   font-size: 18px;
   line-height: 24px;
   color: var(--color-black);
-  padding-top: 12px;
-  padding-left: 20px;
-  background-image: url(../images/calendar.svg);
-  background-repeat: no-repeat;
-  background-position: right 22px top 16px;
-
+  opacity: 0.6;
 }
 
-.date-arrival {
+.date-arrival:hover {
+background-color: var(--color-background-price);
+opacity: 0.6;
+}
+
+.date-arrival:focus {
+  background-color: var(--color-background-price);
+  opacity: 0.6;
+  border: 3px solid var(--color-light-blue);
+  outline: none;
+}
+
+.date-arrival:active {
   background-color: var(--color-background-white);
-  border-style: none;
-  border-radius: 4px;
-  padding: 0;
+  border: 2px solid var(--color-black);
 }
 
 .model-text {
@@ -1341,7 +1357,6 @@ ul {
   width: 31px;
   border: none;
   background-color: var(--color-background-white);
-  color: var(--color-black);
 }
 
 .field-number {
@@ -1356,6 +1371,7 @@ ul {
 .filed-button + input[type="number"]::placeholder {
   padding: 14px 10px;
   margin: 0;
+  color: var(--color-black);
 }
 
 
@@ -1368,59 +1384,64 @@ ul {
   border: none;
   border-radius: 4px 0 0 4px;
   background-color: var(--color-background-white);
+  outline: none;
 }
 .field-minus,
 .field-plus {
   width: 20px;
   height: 20px;
-  position: relative;
 }
 
-.field-minus::before,
-.field-plus::before {
-  content: "";
-  width: 2px;
-  height: 14px;
-  background-color: var(--color-brown-30);
-  transform: rotate(-90deg);
+.filed-button-icon {
   display: block;
-  margin: auto;
-  position: absolute;
-  right: 9px;
-  top: 3px;
+  margin: 3px auto;
 }
 
-.field-plus::after {
-  content: "";
-  width: 2px;
-  height: 14px;
-  background-color: var(--color-brown-30);
-  display: block;
-  position: absolute;
-  left: 9px;
-  top: 3px;
+.filed-button-icon-minus {
+  margin: 9px auto;
 }
-
 
 .field-number::-webkit-outer-spin-button,
 .field-number::-webkit-inner-spin-button {
   display: none;
 }
 
-.filed-button:hover .field-minus::before,
-.filed-button:hover .field-plus::after,
-.filed-button:hover .field-plus::before,
-.filed-button:focus .field-minus::before,
-.filed-button:focus .field-plus::after,
-.filed-button:focus .field-plus::before   {
-  background-color: var(--color-black);
+.filed-button:hover .field-minus > svg,
+.filed-button:hover .field-plus > svg,
+.filed-button:focus .field-minus > svg,
+.filed-button:focus .field-plus > svg {
+  fill: var(--color-black);
+  fill-opacity: 1;
 }
 
-.filed-button:focus .field-minus,
-.filed-button:focus .field-plus {
+.filed-button:focus .field-minus > svg{
+  fill: var(--color-black);
+  fill-opacity: 1;
+  margin: 6px 0;
+}
+.filed-button:focus .field-plus > svg {
+  fill: var(--color-black);
+  fill-opacity: 1;
+  margin: 0;
+}
+
+.filed-button:focus .field-minus {
+  fill: var(--color-black);
+  fill-opacity: 1;
   border: 3px solid var(--color-light-blue);
   border-radius: 4px;
+  outline: none;
+  height: 14px;
+}
 
+.filed-button:focus .field-plus{
+  margin-top: 0;
+  fill: var(--color-black);
+  fill-opacity: 1;
+  border: 3px solid var(--color-light-blue);
+  border-radius: 4px;
+  outline: none;
+  height: 14px;
 }
 
 .more-button {
