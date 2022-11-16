@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" href="/images/favicon.png" type="png">
+    <link rel="shortcut icon" href="./images/favicon.png" type="png">
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -12,7 +12,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
-          <img src="/images/logo.svg" width="140" height="70" alt="Лототип сайта седона в навигации">
+          <img src="images/logo.svg" width="140" height="70" alt="Лототип сайта седона в навигации">
         </a>
 
         <ul class="navigation-list">
@@ -31,12 +31,15 @@
             <a class="navigation-link navigation-link-search" href="#"><span class="visually-hidden">Поиск</span></a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-favorites" href="#"><span
-                class="visually-hidden">Избранное</span><span class="namber-wrap"><span
-                  class="number">12</span></span></span></a>
+            <a class="navigation-link navigation-link-favorites" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="namber-wrap">
+                <span class="number">12</span>
+              </span>
+            </a>
           </li>
           <li class="navigation-item">
-            <a class="button navigation-link" href="#modal-container">Хочу сюда!</a>
+            <a class="button navigation-link" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -62,7 +65,7 @@
             <p class="advadvantages-text">Седона — не аттракцион для<br>туристов,там течёт своя<br>жизнь</p>
           </li>
           <li class=" advantages-item-house">
-            <img class="photo-house" src="#" alt="Фотография домов города с видом на горы">
+            <span class="visually-hidden">Фотография домов города с видом на горы</span>
           </li>
           <li class="advantages-item advantages-item-light-blue-12">
             <h3 class="advantages-title">Небольшая<br>площадь</h3>
@@ -77,7 +80,7 @@
             <p class="advadvantages-text">Большинство едет в Гранд<br>Каньон и толпится там!</p>
           </li>
           <li class="advantages-item-evil-bridge">
-            <img class="photo-devil-bridge" src="#" alt="Фотография моста дьявола">
+            <span class="visually-hidden">Фотография моста дьявола</span>
           </li>
           <li class="advantages-item advantages-item-light-blue">
             <h3 class="advantages-title advantages-title-white">Там есть<br>мост дьявола</h3>
@@ -118,7 +121,7 @@
           <button class="button-additional  button button-additional-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
-      </div>
+
     </main>
     <footer class="page-footer">
       <div class="page-footer-container">
@@ -173,13 +176,17 @@
     <div class="modal-container modal-container-close">
       <div class="modal">
         <button class="modal-close-button" type="button">
-          <svg class="cross-icon" width="15" height="15" viewBox="0 0 15 15" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 1.8 13.2.5 7.5 6.2 1.8.5.5 1.8l5.7 5.7-5.7 5.7 1.3 1.3 5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7 5.7-5.7Z"/></svg>
+          <svg class="cross-icon" width="15" height="15" viewBox="0 0 15 15" fill="black"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.5 1.8 13.2.5 7.5 6.2 1.8.5.5 1.8l5.7 5.7-5.7 5.7 1.3 1.3 5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7 5.7-5.7Z" />
+          </svg>
           <span class="visually-hidden">Закрытие подального окна</span>
         </button>
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-        <div class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="modal-arrival-wrap">
-            <lebel class="modal-form-title" for="arrival">Дата заезда:</lebel>
+            <label class="modal-form-title" for="arrival">Дата заезда:</label>
             <input class="date-arrival" id="arrival" name="Дата заезда:" type="text" placeholder="27 апреля 2020"
               required>
             <p class="model-text modal-text-danger">Мы не можем отправить вас в прошлое.</p>
@@ -189,6 +196,7 @@
             <label class="modal-form-title" for="departed">Дата выезда:</label>
             <input class="date-arrival" id="departed" name="Дата выезда:" type="text" placeholder="1 сентября 2023"
               required>
+
             <p class="model-text">На эти даты есть свободные номера. Пока есть.</p>
           </div>
 
@@ -199,7 +207,10 @@
               <div class="filed-botton-wrap">
                 <button class="filed-button" type="button">
                   <span class="field-minus">
-                    <svg class="filed-button-icon filed-button-icon-minus" width="14" height="2" viewBox="0 0 14 2" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v2h14V0H0Z"/></svg>
+                    <svg class="filed-button-icon filed-button-icon-minus" width="14" height="2" viewBox="0 0 14 2"
+                      fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0v2h14V0H0Z" />
+                    </svg>
                   </span>
                   <span class="visually-hidden">Минус</span>
                 </button>
@@ -207,7 +218,10 @@
                   required>
                 <button class="more-button filed-button" type="button">
                   <span class="field-plus">
-                    <svg class="filed-button-icon" width="14" height="14" viewBox="0 0 14 14" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg"><path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/></svg>
+                    <svg class="filed-button-icon" width="14" height="14" viewBox="0 0 14 14" fill="#756157"
+                      fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                    </svg>
                   </span>
                   <span class="visually-hidden">Плюс</span>
                 </button>
@@ -215,37 +229,49 @@
             </div>
 
             <div class="filed-wrap-right filed-wrap">
-              <span class="info"><label class="modal-form-title info" id="child-arrival">Дети:</label>
-              <span class="visually-hidden">Посмотреть дополнительную
-                  информацтю</span></span>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                    <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/></svg>
-                  </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                </span>
+              <span class="info">
+                <label class="modal-form-title" for="child-arrival">Дети:</label>
+                <span class="visually-hidden">Посмотреть дополнительнуюинформацтю</span>
+              </span>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff" />
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
+                  будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
               <div class="filed-botton-wrap">
                 <button class="filed-button" type="button">
                   <span class="field-minus">
-                    <svg class="filed-button-icon filed-button-icon-minus" width="14" height="2" viewBox="0 0 14 2" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v2h14V0H0Z"/></svg>
+                    <svg class="filed-button-icon filed-button-icon-minus" width="14" height="2" viewBox="0 0 14 2"
+                      fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0v2h14V0H0Z" />
+                    </svg>
                   </span>
                   <span class="visually-hidden">Минус</span></button>
                 <input class="field-number" id="child-arrival" name="Количесвто детей" type="number" placeholder="2"
                   required>
                 <button class="more-button filed-button" type="button">
                   <span class="field-plus">
-                    <svg class="filed-button-icon" width="14" height="14" viewBox="0 0 14 14" fill="#756157" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg"><path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/></svg>
+                    <svg class="filed-button-icon" width="14" height="14" viewBox="0 0 14 14" fill="#756157"
+                      fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                    </svg>
                   </span>
                   <span class="visually-hidden">Плюс</span></button>
               </div>
             </div>
             <button class="modal-button button-additional" type="submit">Найти</button>
           </div>
-        </div>
+        </form>
       </div>
-      </form>
     </div>
-    </div>
+
+
 
 
   </body>
