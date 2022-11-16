@@ -40,7 +40,7 @@
   --box-shadow-02: rgba(0, 0, 0, 0.2);
   --box-shadow-25: rgba(0, 0, 0, 0.25);
   --box-shadow-40: rgba(0, 0, 0, 0.4);
-  --box-shadow-15:rgba(0, 0, 0, 0.15);
+  --box-shadow-15: rgba(0, 0, 0, 0.15);
   --color-gray-06: rgba(255, 255, 255, 0.6);
   --modal-background: rgba(242, 242, 242, 0.8);
 }
@@ -65,6 +65,7 @@ ul {
 }
 
 .button {
+  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -93,6 +94,7 @@ ul {
 }
 
 .button-additional {
+  font-family: 'PT Sans', sans-serif;
   font-size: 16px;
   line-height: 20px;
   background-color: var(--color-light-blue);
@@ -104,6 +106,7 @@ ul {
 }
 
 .button-invisible {
+  font-family: 'PT Sans', sans-serif;
   background-color: transparent;
   padding: 8px 57px;
   width: 191px;
@@ -165,7 +168,6 @@ ul {
 .button-additional-subscribe {
   font-size: 20px;
   line-height: 36px;
-  letter-spacing: -2px;
   border: none;
   border-radius: 0 4px 4px 0;
   padding: 8px 50px;
@@ -199,7 +201,6 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 
 .page-header {
   background-color: var(--color-white);
@@ -301,18 +302,25 @@ ul {
   margin: 5px 4px;
 }
 
+.navigation-link:hover,
+.navigation-link:focus {
+  color: var(--color-brown);
+}
+
+.navigation-link:active {
+  color: var(--color-brown-30);
+}
 
 .navigation-link.button {
   font-size: 16px;
   line-height: 20px;
-  display: inline;
   width: 160px;
   height: 36px;
   color: var(--color-white);
   padding: 8px 34px;
   border-radius: 4px;
   text-transform: uppercase;
-
+  box-sizing: border-box;
 }
 
 .hero-block {
@@ -338,7 +346,6 @@ ul {
   margin: 0 auto;
   padding-top: 52px;
 }
-
 
 .description {
   text-align: center;
@@ -380,11 +387,11 @@ ul {
   min-height: 384px;
   text-align: center;
   padding-top: 102px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 62px;
   box-sizing: border-box;
-  position: relative;
 }
 
 .advantages-item-light-blue {
@@ -410,6 +417,7 @@ ul {
   text-transform: uppercase;
   color: var(--color-black);
   margin: 0;
+  position: relative;
 }
 
 .advantages-title::after {
@@ -420,12 +428,12 @@ ul {
   background: var(--color-black-03);
   position: absolute;
   left: 170px;
-  top: 189px;
+  top: 87px;
 }
 
 .advantages-item-light-blue .advantages-title::after {
   background: var(--color-range-scale);
-  top: 178px;
+  top: 87px;
 }
 
 .advadvantages-text {
@@ -440,12 +448,14 @@ ul {
   width: 800px;
   height: 384px;
   background-image: url(../images/photo-house.jpg);
+  background-repeat: no-repeat;
 }
 
 .advantages-item-evil-bridge {
   width: 800px;
   height: 384px;
   background-image: url(../images/photo-devil-bridge.jpg);
+  background-repeat: no-repeat;
 }
 
 .recommendations-list {
@@ -467,7 +477,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  position: relative;
 }
 
 .recommendations-title {
@@ -477,27 +486,28 @@ ul {
   color: var(--color-black);
   text-transform: uppercase;
   margin: 0;
+  position: relative;
 }
 
 .recommendations-item:first-child .recommendations-title::after {
   content: url(../images/home-icon.svg);
   position: absolute;
-  left: 162px;
-  top: 80px;
+  left: 40%;
+  top: -102px;
 }
 
 .recommendations-item:nth-child(2) .recommendations-title::after {
   content: url(../images/eat-icon.svg);
   position: absolute;
-  left: 162px;
-  top: 80px;
+  left: 40%;
+  top: -102px;
 }
 
 .recommendations-item:last-child .recommendations-title::after {
   content: url(../images/gift-icon.svg);
   position: absolute;
-  left: 162px;
-  top: 80px;
+  left: 40%;
+  top: -102px;
 }
 
 .recommendations-text {
@@ -533,8 +543,7 @@ ul {
 }
 
 .subscribe {
-  padding-top: 96px;
-  padding-bottom: 104px;
+  padding: 96px 256px 104px 256px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -585,7 +594,6 @@ ul {
   padding: 14px 0 14px 20px;
 }
 
-
 .page-footer {
   background-color: var(--color-white);
   padding: 45px 70px 35px;
@@ -601,18 +609,6 @@ ul {
   display: flex;
   flex-wrap: wrap;
   margin: 5px 0;
-}
-
-.footer-social-item:first-child a > svg {
-  transform: translate(-2px, -8px);
-}
-
-.footer-social-item:last-child a > svg {
-  transform: translateY(-7px);
-}
-
-.footer-social-item:not(:first-child).footer-social-item:not(:last-child) a > svg {
-  transform: translate(3px, -8px);
 }
 
 .footer-social-link {
@@ -638,6 +634,7 @@ ul {
 
 .contacts {
   text-align: center;
+  width: 40%;
 }
 
 .contacts-phone {
@@ -671,7 +668,6 @@ ul {
   fill: var(--color-brown-30);
 }
 
-
 .filters {
   min-height: 412px;
   display: flex;
@@ -689,7 +685,6 @@ ul {
   margin: 35px auto 40px;
 }
 
-
 .filters-title {
   font-size: 60px;
   line-height: 78px;
@@ -699,6 +694,7 @@ ul {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
 }
 
@@ -722,7 +718,6 @@ ul {
 .breadcrumbs-link:active {
   fill: var(--color-gray-06);
 }
-
 
 .cotalog-filter-container {
   display: flex;
@@ -787,7 +782,6 @@ ul {
   top: -1px;
 }
 
-
 .control:hover .control-mark,
 .control:hover .control-mark-radio {
   opacity: 0.6;
@@ -831,11 +825,6 @@ ul {
   flex-wrap: wrap;
 }
 
-/* .filter-button-wrap {
-  display: flex;
-  flex-direction: column;
-} */
-
 .cotalog-filter-title {
   font-size: 20px;
   line-height: 24px;
@@ -858,7 +847,7 @@ ul {
 .price-container {
   display: flex;
   gap: 2px;
-  height: 48px;
+  max-height: 48px;
   margin-bottom: 36px;
 }
 
@@ -871,7 +860,7 @@ ul {
   width: 143px;
   padding: 0;
   border-style: none;
-  max-height: 48px;
+  height: 48px;
 }
 
 .price:hover {
@@ -905,6 +894,11 @@ ul {
   border-radius: 0 4px 4px 0;
 }
 
+.price-min::placeholder,
+.price-max::placeholder {
+  padding: 12px 20px 12px 106px;
+}
+
 .range-scale {
   position: relative;
   height: 4px;
@@ -929,7 +923,6 @@ ul {
 }
 
 .toggle-min {
-  left: 2;
   top: -8px;
 }
 
@@ -971,6 +964,7 @@ ul {
   font-weight: 700;
   margin-right: 200px;
   text-transform: uppercase;
+  max-width: 338px;
 }
 
 .search-result-title {
@@ -1019,6 +1013,7 @@ ul {
 .bitton-light-wrap {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .hotel-card-list {
@@ -1032,10 +1027,11 @@ ul {
 
 .hotel-card-item {
   flex-basis: 340px;
+  max-width: 340px;
   box-sizing: border-box;
   border: 1px solid var(--color-background-price);
   border-radius: 4px;
-  padding: 19px;
+  padding: 18px;
 }
 
 .hotel-card-link {
@@ -1052,7 +1048,6 @@ ul {
   font-size: 24px;
   line-height: 28px;
   margin: 0;
-  display: inline;
   color: var(--color-black);
 }
 
@@ -1066,12 +1061,10 @@ ul {
 
 .hotel-card-info-wrap button:first-of-type {
   padding: 8px 26px;
-  letter-spacing: -2px;
 }
 
 .hotel-card-info-wrap button:last-of-type {
   padding: 8px 20px;
-  letter-spacing: -2px;
 }
 
 .hotel-card-price {
@@ -1153,8 +1146,7 @@ ul {
 }
 
 .pagination-link:active {
-  color: var(--color-range-scale)
-  ;
+  color: var(--color-range-scale);
 }
 
 .pagination-current {
@@ -1262,7 +1254,7 @@ ul {
   right: 52px;
 }
 
-.cross-icon{
+.cross-icon {
   display: block;
   margin: auto;
 }
@@ -1278,7 +1270,7 @@ ul {
 }
 
 .modal-close-button:active svg {
- fill: var(--color-black-03);
+  fill: var(--color-black-03);
 }
 
 .modal-title {
@@ -1286,7 +1278,7 @@ ul {
   line-height: 36px;
   margin: 0;
   margin-bottom: 64px;
-  text-transform:uppercase
+  text-transform: uppercase
 }
 
 .modal-form-title {
@@ -1295,6 +1287,7 @@ ul {
   font-weight: 700;
   padding: 12px 0;
 }
+
 .date-arrival {
   background-color: var(--color-background-white);
   border-style: none;
@@ -1318,8 +1311,8 @@ ul {
 }
 
 .date-arrival:hover {
-background-color: var(--color-background-price);
-opacity: 0.6;
+  background-color: var(--color-background-price);
+  opacity: 0.6;
 }
 
 .date-arrival:focus {
@@ -1374,7 +1367,6 @@ opacity: 0.6;
   color: var(--color-black);
 }
 
-
 .filed-button {
   width: 40px;
   padding: 14px 10px;
@@ -1386,6 +1378,7 @@ opacity: 0.6;
   background-color: var(--color-background-white);
   outline: none;
 }
+
 .field-minus,
 .field-plus {
   width: 20px;
@@ -1414,11 +1407,12 @@ opacity: 0.6;
   fill-opacity: 1;
 }
 
-.filed-button:focus .field-minus > svg{
+.filed-button:focus .field-minus > svg {
   fill: var(--color-black);
   fill-opacity: 1;
   margin: 6px 0;
 }
+
 .filed-button:focus .field-plus > svg {
   fill: var(--color-black);
   fill-opacity: 1;
@@ -1434,7 +1428,7 @@ opacity: 0.6;
   height: 14px;
 }
 
-.filed-button:focus .field-plus{
+.filed-button:focus .field-plus {
   margin-top: 0;
   fill: var(--color-black);
   fill-opacity: 1;
@@ -1490,17 +1484,17 @@ opacity: 0.6;
   left: -112px;
   top: 41px;
   display: none;
- }
+}
 
- .tooltip-text::before{
+.tooltip-text::before {
   content: url(../images/triangle-tooltip.svg);
   display: block;
   width: 19px;
   height: 9px;
   position: absolute;
   top: -15px;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1509,7 +1503,6 @@ opacity: 0.6;
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
-
 
 
 .modal-button {
